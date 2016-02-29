@@ -10,7 +10,6 @@ define('DB_HOST', SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT);
 define('DB_USER', SAE_MYSQL_USER );
 define('DB_PWD', SAE_MYSQL_PASS);
 define('DB_NAME',SAE_MYSQL_DB);
-echo DB_HOST;
 //初始化数据库
 _connect();
 _select_db();
