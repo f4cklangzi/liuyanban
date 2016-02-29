@@ -6,9 +6,9 @@
 *===================================================
 **/
 //数据库连接
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PWD', 'root');
+define('DB_HOST', SAE_MYSQL_HOST_M);
+define('DB_USER', SAE_MYSQL_USER );
+define('DB_PWD', SAE_MYSQL_PASS);
 define('DB_NAME', 'testguest');
 //初始化数据库
 _connect();
