@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+#list{
+	width: 600px;
+	height: 512px;
+	border: 1px solid #ccc;
+	float:right;
+	background-color: #fff;
+}
+#user{
+	width: 340px;
+	height: 250px;
+	border: 1px solid #ccc;
+	float:left;
+	margin: 0 0 10px 0;
+	background-color: #fff;
+}
+#user dl{
+	width: 170px;
+	margin: 0 auto;
+	padding-top: 10px;
+	font-size: 12px;
+}
+#user dl dt{
+	width: 170px;
+}
+#user dl dt img{
+	margin: 0 auto;
+	display: block;
+}
+#user dl dd{
+	height: 15px;
+	width: 85px;
+	line-height: 20px;
+	float: left;
+	text-align: center;
+}
+#user dl dd.email,#user dl dd.url{
+	width: 170px;
+	text-align: left;
+	padding-top: 2px;
+	text-indent: 5px;
+}
+#user dl dd a{
+	text-decoration: none;
+	color: #369;
+}
+#user dl dd.user{
+	width: 170px;
+	clear: both;
+	color: red;
+}
+#user dl dd.message{
+	background:url(../../image/x1.gif) no-repeat 5px 40%;
+}
+#user dl dd.friend{
+	background:url(../../image/x2.gif) no-repeat left 40%;
+}
+#user dl dd.guest{
+	background:url(../../image/x3.gif) no-repeat 5px 40%;
+}
+#user dl dd.flower{
+	background:url(../../image/x4.gif) no-repeat left 40%;
+}
+#pics{
+	width: 340px;
+	height: 250px;
+	border: 1px solid #ccc;
+	float:left;
+	background-color: #fff;
+}

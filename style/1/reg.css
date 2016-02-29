@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+#register{
+	font-size: 12px;
+	width: auto;
+	height: auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#register h2{
+	text-align: center;
+}
+#register dl{
+	width: 220px;
+	margin: 0 auto;
+	text-align: center;
+}
+#register dt{
+	text-align: center;
+	padding: 10px 0;
+	font-weight: bold;
+}
+#register dl dd{
+	padding: 5px 0;
+}
+#register dl dd span{
+	text-align: left;
+	display: block;
+}
+#register dl dd img{
+	cursor: pointer;
+}
+#register dl dd input.text{
+	width: 220px;
+	height: 19px;
+	border: 1px solid #ccc;
+}
+#register dl dd input.yzm{
+	width: 60px;
+}
+#register dl .code{
+	position: relative;
+}
+#register dl .code img{
+	position: absolute;
+	top: 2px;
+	left: 145px;
+}
+#register dl input.submit{
+	width: 60px;
+	height: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 0px solid #000;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+}
+#register dl input.submit:hover{
+	background-color: #ccc;
+}

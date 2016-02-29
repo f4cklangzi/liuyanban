@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+#blog{
+	font-size: 12px;
+	width: auto;
+	height: auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#blog h2{
+	text-indent: 0;
+	text-align: center;
+}
+#blog dl{
+	float: left;
+	width: 150px;
+	margin: 10px 0 0 34px;
+}
+#blog dl dt{
+	width: 150px;
+}
+#blog dl dt img{
+	margin: 0 auto;
+	display: block;
+}
+#blog dl dd{
+	height: 15px;
+	width: 75px;
+	line-height: 20px;
+	float: left;
+	text-align: center;
+}
+#blog dl dd a{
+	text-decoration: none;
+	color: #369;
+}
+#blog dl dd.user{
+	width: 150px;
+	clear: both;
+	color: red;
+}
+#blog dl dd.message{
+	background:url(../../image/x1.gif) no-repeat 5px 40%;
+}
+#blog dl dd.friend{
+	background:url(../../image/x2.gif) no-repeat left 40%;
+}
+#blog dl dd.guest{
+	background:url(../../image/x3.gif) no-repeat 5px 40%;
+}
+#blog dl dd.flower{
+	background:url(../../image/x4.gif) no-repeat left 40%;
+}

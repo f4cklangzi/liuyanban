@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+#member #member_main dl{
+	width: 80%;
+}
+#member #member_main dl span{
+	margin: 0 0 0 150px;
+	display: inline-block;
+	width: 200px;
+	background-color: #eee;
+}
+#member #member_main dl dd{
+	padding: 8px 0;
+	width: 500px;
+	text-align: center;
+}
+#member #member_main dl dd input{
+	border: 1px solid #ccc;
+	width: 200px;
+}
+#member #member_main dl dd.sex input{
+	width: 30px;
+	margin: 0 0 0 10px;
+}
+#member #member_main dl input.code{
+	width: 60px;
+}
+#member #member_main dl .codetext{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	position: relative;
+}
+#member #member_main dl img{
+	margin: 0 0 0 2px;
+	position: absolute;
+	top: 3px;
+}
+#member #member_main dl img:hover{
+	cursor: pointer;
+}
+#member #member_main dl input.button{
+	width: 60px;
+	height: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #000;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+}
+#member #member_main dl input.button:hover{
+	background-color: #ccc;
+}
+

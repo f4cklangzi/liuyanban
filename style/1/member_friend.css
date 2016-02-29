@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+#member #member_main table{
+	width: 90%;
+	margin: 9px auto;
+	text-align: center;
+	background-color: #ccc;
+}
+#member #member_main table th,#member #member_main table td{
+	height: 25px;
+	line-height: 25px;
+}
+#member #member_main table .line{
+	background-color: #fff;
+}
+#member #member_main table .line:hover{
+	background-color: #eee;
+}
+#member #member_main table .content{
+	color: black;
+	cursor: pointer;
+}
+#member #member_main table .content:hover{
+	color: blue;
+}
+
+#member #member_main table td .unpass{
+	color: red;
+}
+#member #member_main table td .passing{
+	color: #309;
+	text-decoration: none;
+}
+#member #member_main table td .passing:hover{
+	color: blue;
+	text-decoration:underline;
+}
+#member #member_main table td .passed{
+	color: green;
+}
+#member #member_main table .del{
+	text-align: right;
+}
+#member #member_main table #delete{
+	height: 24px;
+	margin-left: 3px;
+}
