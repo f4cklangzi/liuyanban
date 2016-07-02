@@ -1,0 +1,339 @@
+@CHARSET "UTF-8";
+#photo_detail{
+	font-size: 12px;
+	width: auto;
+	height: auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#photo_detail h2{
+	text-indent: 0;
+	text-align: center;
+}
+#photo_detail p{
+	text-align: center;
+	padding: 20px;
+	clear: both;
+}
+#photo_detail p a{
+	font-size: 14px;
+	color: #666;
+}
+#photo_detail dl.detail{
+	text-align: center;
+	margin: 20px;
+}
+#photo_detail dl.detail dt{
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#photo_detail dl.detail dd{
+	padding: 10px 0;
+}
+#photo_detail dl.detail dd a{
+	text-decoration: none;
+	color: #369;
+	cursor: pointer;
+}
+#photo_detail dl.detail dd a:hover{
+	text-decoration: underline;
+	color: red;
+}
+#photo_detail dl.detail dd a.page{
+	font-size: 14px;
+	padding: 20px;
+	vertical-align: top;
+}
+#photo_detail p.line{
+	/*width: 98%;*/
+	border-bottom: 1px dashed #333;
+}
+#photo_detail p.autograph{
+	background: url(../../image/sigline.gif) no-repeat;
+	padding-top: 10px;
+	text-align: left;
+	margin: 0 0 0 190px;
+	width: 78%;
+	padding: 10px 0 0 0;
+}
+#photo_detail div.re dl{
+	width: 170px;
+	padding:  10px 0 0 10px;
+	font-size: 12px;
+	float: left;
+}
+#photo_detail div.re dl dt{
+	margin: 0 auto;
+}
+#photo_detail div.re dl dt img{
+	margin: 0 21px;
+	
+}
+#photo_detail div.re dl dd{
+	height: 15px;
+	width: 85px;
+	line-height: 20px;
+	float: left;
+	text-align: center;
+}
+#photo_detail div.re dl dd.email,#photo_detail div.re dl dd.url{
+	width: 200px;
+	text-align: left;
+	padding-top: 2px;
+	margin-top: 2px;
+	height: 20px;
+	text-indent: 5px;
+}
+#photo_detail div.re dl dd a{
+	text-decoration: none;
+	color: #369;
+	cursor: pointer;
+}
+#photo_detail div.re dl dd.user{
+	width: 170px;
+	clear: both;
+	color: red;
+}
+#photo_detail div.re dl dd.message{
+	background:url(../../image/x1.gif) no-repeat 5px 40%;
+	margin: 0 0 0 10px;
+	width: 75px;
+}
+#photo_detail div.re dl dd.friend{
+	background:url(../../image/x2.gif) no-repeat left 40%;
+	margin: 0 0 0 5px;
+	width: 75px;
+}
+#photo_detail div.re dl dd.guest{
+	background:url(../../image/x3.gif) no-repeat 5px 40%;
+	margin: 0 0 0 10px;
+	width: 75px;
+}
+#photo_detail div.re dl dd.flower{
+	background:url(../../image/x4.gif) no-repeat left 40%;
+	margin: 0 0 0 5px;
+	width: 75px;
+}
+#photo_detail div.content{
+	float: right;
+	width: 750px;
+	padding: 8px 20px 0 0;
+}
+#photo_detail div.content .user{
+	height: 30px;
+	line-height: 30px;
+	background: url(../../image/member.gif) no-repeat left center;
+	border-bottom: 1px dashed #999;
+	color: #666;
+	padding: 0 0 0 20px;
+}
+#photo_detail div.content .user span{
+	float: right;
+	color: #06f;
+}
+#photo_detail div.content .user span a{
+	text-decoration: none;
+	color: #06f;
+}
+#photo_detail div.content .user span a:hover{
+	text-decoration: underline;
+	color: red;
+}
+#photo_detail div.content h3{
+	font-size: 14px;
+	line-height: 40px;
+}
+#photo_detail div.content h3 img{
+	margin: 0 0 0 3px;
+	position: relative;
+	top: 3px;
+}
+#photo_detail div.content h3 span{
+	float: right;
+	font-size: 12px;
+	font-weight: normal;
+}
+#photo_detail div.content h3 span a{
+	text-decoration: none;
+	color: #06f;
+}
+#photo_detail div.content h3 span a:hover{
+	text-decoration: underline;
+	color: red;
+	cursor: pointer;
+}
+#photo_detail div.content .detial{
+	font-size: 14px;
+	line-height: 200%;
+}
+#photo_detail div.content .detial a{
+	text-decoration:none;
+	color: blue;
+}
+#photo_detail div.content .detial a:hover{
+	text-decoration:underline;
+	color: red;
+}
+#message form{
+	position: relative;
+}
+
+#message h3{
+	margin: 0 auto;
+	width: 95%;
+	height: 30px;
+	font-size: 17px;
+	line-height: 30px;
+	text-align: left;
+	background-color: #eee;
+}
+#message dl{
+	width: 95%;
+	margin: 0 auto;
+}
+#message dl dd{
+	margin: 3px 0;
+}
+#message dl dd span{
+	margin-right: 3px;
+	position: absolute;
+	top: 2px;
+}
+#message dl span.content_title{
+	position: absolute;
+	display: inline;
+	top: 30px;
+	margin-right: 3px;
+}
+#message dl dd input.text:hover{
+	border: 1px solid #369;
+	background-color: #f1f1f1;
+}
+#message dl dd textarea:hover{
+	border-bottom: 1px solid #369;
+	border-left:1px solid #369;
+	border-right: 1px solid #369;
+	background-color: #f1f1f1;
+}
+#message dl dd input.text{
+	width: 300px;
+	height: 19px;
+	background-color: #fff;
+	border: 1px solid #999;
+	position: relative;
+	left: 30px;
+}
+#message dl dd input.code{
+	width: 40px;
+	height: 19px;
+	border: 1px solid #999;
+	background-color: #fff;
+}
+#message dl dd textarea{
+	width: 877px;
+	height: 115px;
+	resize: none;
+	background-color: #fff;
+	border: 1px solid #999;
+	position: relative;
+	left: 30px;
+	top: -3px;
+}
+#message dl .codetext{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+}
+#message dl img{
+	margin: 0 0 0 4px;
+	position: relative;
+	top: 4px;
+}
+#message dl img:hover{
+	cursor: pointer;
+}
+#message dl input.button{
+	width: 60px;
+	height: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #999;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+	position: relative;
+	left: 30px;
+}
+#message dl input.button:hover{
+	background-color: #e5e5e5;
+}
+#message dl div#ubb{
+	width: 877px;
+	height: 26px;
+	background: url(../../image/bgmenubar.gif);
+	border: 1px solid #369;
+	border-bottom: none;
+	display: inline-block;
+	position: relative;
+	left: 30px;
+}
+#message dl #ubb img{
+	padding: 2px 0 0 6px;
+}
+#message dl #ubb img.ubb:hover{
+	cursor: pointer;
+}
+#message dl div#font{
+	z-index: 999;
+	display: none;
+	width: 130px;
+	height: 40px;
+	background-color: #eee;
+	border: 1px solid #333;
+	padding: 8px;
+	line-height: 20px;
+	position: absolute;
+	left: 67px;
+	top: 49px;
+}
+#message dl div#font strong{
+	font-weight: normal;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+#message dl div#color{
+	z-index: 999;
+	display: none;
+	width: 152px;
+	height: 60px;
+	font-size: 12px;
+	background-color: #ccc;
+	border: 1px solid #333;
+	padding: 4px 0 0 4px;
+	position: absolute;
+	left: 243px;
+	top: 49px;
+}
+#message dl div#color strong{
+	border: 1px solid #999;
+	display: block;
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 4px 0 0 4px;
+	cursor: pointer;
+}
+#message dl div#color em{
+	display: block;
+	height: 28px;
+	width: 80%;
+	clear: both;
+}
+#message dl div#color em input{
+	margin: 10px 0 0 4px;
+	width: 136px;
+	height: 20px;
+	cursor: pointer;
+	background-color: #fff;
+} 

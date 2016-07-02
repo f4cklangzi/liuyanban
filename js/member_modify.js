@@ -6,18 +6,6 @@ window.onload=function(){
 	fm.onsubmit=function(){
 		//能用客户端的尽量客户端
 		//JS对于PHP课程来说，选学，不强制掌握
-		//用户名验证
-		if (fm.username.value.length<2 || fm.username.value.length>20) {
-			alert('用户名不得小于2位或者大于20位!');
-			fm.username.focus();
-			return false;
-		};
-		if (/[<>\'\"\ ]/.test(fm.username.value)) {
-			alert('用户名不得包含非法字符！');
-			fm.username.value='';
-			fm.username.focus();
-			return false;
-		};
 		//密码验证
 		if (fm.password.value!='') {
 			if (fm.password.value.length<6) {
@@ -47,6 +35,14 @@ window.onload=function(){
 			if (!/^((http|ftp|https):\/\/)?[\w\-_]+(\.[\w\-_\/]+)+$/.test(fm.url.value)) {
 				alert('网址格式不正确！');
 				fm.url.focus();
+				return false;
+			};
+		};
+		//个性签名验证
+		if (fm.autograph.value!='') {
+			if (fm.autograph.value.length>40) {
+				alert('个性签名长度不能超过40字符！');
+				fm.autograph.focus();
 				return false;
 			};
 		};

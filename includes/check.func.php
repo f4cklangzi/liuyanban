@@ -31,11 +31,14 @@ function _check_username($_username,$min=2,$max=20){
 		_alert_back('用户名不得包含敏感字符！');
 	}
 	//限制敏感用户名
-	$_mg[0]='admin';
+    global $_system;
+    $_mg=explode('|',$_system['string']);
 	//采用绝对匹配
-	if (in_array($_username, $_mg)) {
-		_alert_back('禁止使用敏感用户名！');
-	}
+    foreach ($_mg as $_key){
+        if (preg_match('/'.$_key.'/',$_username)){
+            _alert_back('禁止使用敏感用户名！');
+        }
+    }
 	//转义
 	return _mysql_string($_username);
 }
@@ -148,8 +151,8 @@ function _check_content($_content,$min=1,$max=200){
 	$_content=trim($_content);
 	//长度小于1位或者大于200位不通过
 	if (mb_strlen($_content,'utf-8')<$min || mb_strlen($_content,'utf-8')>$max) {
-		_alert_back('消息长度必须在'.$min.'和'.$max.'之间！');
+		_alert_back('信息长度必须在'.$min.'和'.$max.'之间！');
 	}
-	return $_content;
+	return _mysql_string($_content);
 }
 ?>

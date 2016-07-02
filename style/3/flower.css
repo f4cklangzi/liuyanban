@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+body{
+	width: auto;
+}
+#flower h3{
+	width: 90%;
+	margin: 10px auto;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #ccc;
+}
+#flower dl{
+	width: 90%;
+	margin: 0 auto;
+}
+#flower dl dd{
+	margin: 5px 0;
+}
+#flower dl dd input.text{
+	width: 180px;
+	height: 19px;
+	background-color: #fff;
+	border:1px solid #369;
+}
+#flower dl dd input.code{
+	width: 40px;
+	height: 19px;
+	background-color: #fff;
+	border: 1px solid #369;
+}
+#flower dl dd textarea{
+	width: 100%;
+	height: 120px;
+	background-color: #fff;
+	border: 1px solid #369;
+	overflow: auto;
+}
+#flower dl .codetext{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	position: relative;
+}
+#flower dl img{
+	margin: 0 0 0 4px;
+	position: absolute;
+	top: 3px;
+}
+#flower dl img:hover{
+	cursor: pointer;
+}
+#flower dl input.button{
+	width: 60px;
+	height: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #000;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+	position: absolute;
+	left: 300px;
+}
+#flower dl input.button:hover{
+	background-color: #ccc;
+}
+#flower dl dd select{
+	width: 50px;
+}
+#flower dl dd .flower_img{
+	position: absolute;
+	top: 53px;
+}

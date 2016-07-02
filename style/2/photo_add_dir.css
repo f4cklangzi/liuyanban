@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+#photo_add_dir{
+	font-size: 12px;
+	width: auto;
+	height: auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#photo_add_dir h2{
+	text-indent: 0;
+	text-align: center;
+}
+#photo_add_dir p{
+	text-align: center;
+	padding: 20px;
+}
+#photo_add_dir p a{
+	font-size: 14px;
+	color: #666;
+}
+#photo_add_dir dd{
+	padding: 1px 0;
+	margin: 3px 0;
+	width: 400px;
+	text-align: left;
+	position: relative;
+	left: 320px;
+}
+#photo_add_dir dd input{
+	border: 1px solid #ccc;
+	width: 200px;
+}
+#photo_add_dir #pass{
+	display: none;
+}
+#photo_add_dir dd span{
+	position: relative;
+	bottom: 100px;
+}
+#photo_add_dir dd textarea{
+	resize: none;
+}
+#photo_add_dir dd input:hover,#photo_add_dir dd textarea:hover{
+	border: 1px solid #369;
+	background-color: #f1f1f1;
+}
+#photo_add_dir dd.type input{
+	width: 40px;
+}
+#photo_add_dir dd input.button{
+	width: 60px;
+	height: 20px;
+	line-height: 15px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #999;
+	display: inline-block;
+	position: relative;
+	left: 145px;
+}
+#photo_add_dir dd input.button:hover{
+	background-color: #e5e5e5;
+}

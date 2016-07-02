@@ -15,12 +15,14 @@
 	define('SCRIPT', 'reg');
 	//引入公共文件
 	include dirname(__FILE__).'/includes/common.inc.php';
+    //连接数据库
+    include ROOT_PATH.'/includes/conn.php';
 	//判断是否提交了
-	if (@$_POST['action']=='register') {
-		//连接数据库
-		include ROOT_PATH.'/includes/conn.php';
+	if (@$_POST['action']=='register' && $_system['register']==1) {
 		//判断验证码是否正确,核心函数库
-		@_check_code($_POST['code'],$_SESSION['code']);
+		if ($_system['code']==1){
+			@_check_code($_POST['code'],$_SESSION['code']);
+		}
 		//引入验证文件
 		require ROOT_PATH.'includes/check.func.php';
 		//创建一个数组存放提交的安全数据
@@ -83,7 +85,6 @@
 			$clean['id']=_insert_id();
 			//关闭连接
 			_close();
-			_session_destroy();
 			//生成XML
 			_set_xml('new.xml',$clean);
 			//跳转
@@ -101,7 +102,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>凌云网络--注册</title>
+<title><?php echo $_system['webname'] ?>--注册</title>
 <?php
 	require ROOT_PATH.'includes/title.inc.php'
 ?>
@@ -117,21 +118,36 @@
 	<form action="register.php" name="register" method="post">
 	<input type="hidden" name="action" value="register" />
 	<input type="hidden" name="uniqid" value="<?php echo $_uniqid?>" />
+        <?php
+            if ($_system['register']!=1) {
+                echo('<h3 style="text-align: center;font-weight: normal">管理员已经关闭注册功能！</h3>');
+            }else{
+        ?>
 		<dl>
-			<dt>请认真填写以下内容</dt>
-			<dd><span>用 户 名：(必填，至少两位)</span><input type="text" name="username" class="text" /></dd>
-			<dd><span>密    码：(必填，至少六位)</span><input type="password" name="password" class="text" /></dd>
-			<dd><span>确认密码：(必填，同上)</span><input type="password" name="notpassword" class="text" /></dd>
-			<dd><span>密码提示：(必填，至少两位)</span><input type="text" name="question" class="text" /></dd>
-			<dd><span>密码回答：(必填，至少两位)</span><input type="text" name="answer" class="text" /></dd>
-			<dd><span>性    别：<input type="radio" name="sex" value="男" checked="checked" />男<input type="radio" name="sex" value="女"/>女</span></dd>
-			<dd><input type="hidden" name="face" value="image/face/1.png" id="face" /><img src="image/face/1.png" alt="头像选择" id="faceimg" /></dd>
-			<dd><span>电子邮件：(必填，用于激活账户)</span><input type="text" name="email" class="text" /></dd>
-			<dd><span>Q      Q：</span><input type="text" name="qq" class="text" /></dd>
-			<dd><span>主页地址：</span><input type="text" name="url" class="text" value="http://" /></dd>
-			<dd class="code" ><span>验 证 码：<input type="text" name="code" class="text yzm"/><img id="code" src="code.php" alt="验证码" /></span></dd>
+                    <dt>请认真填写以下内容</dt>
+                    <dd><span>用 户 名：(必填，至少两位)</span><input type="text" name="username" class="text"/></dd>
+                    <dd><span>密    码：(必填，至少六位)</span><input type="password" name="password" class="text"/></dd>
+                    <dd><span>确认密码：(必填，同上)</span><input type="password" name="notpassword" class="text"/></dd>
+                    <dd><span>密码提示：(必填，至少两位)</span><input type="text" name="question" class="text"/></dd>
+                    <dd><span>密码回答：(必填，至少两位)</span><input type="text" name="answer" class="text"/></dd>
+                    <dd><span>性    别：<input type="radio" name="sex" value="男" checked="checked"/>男<input type="radio"
+                                                                                                         name="sex"
+                                                                                                         value="女"/>女</span>
+                    </dd>
+                    <dd><input type="hidden" name="face" value="image/face/1.png" id="face"/><img src="image/face/1.png"
+                                                                                                  alt="头像选择"
+                                                                                                  id="faceimg"/></dd>
+                    <dd><span>电子邮件：(必填，用于激活账户)</span><input type="text" name="email" class="text"/></dd>
+                    <dd><span>Q      Q：</span><input type="text" name="qq" class="text"/></dd>
+                    <dd><span>主页地址：</span><input type="text" name="url" class="text" value="http://"/></dd>
+            <?php
+				if ($_system['code']==1){
+					echo '<dd class="code" ><span>验 证 码：<input type="text" name="code" class="text yzm"/><img id="code" src="code.php" alt="验证码" /></span></dd>';
+				}
+			?>
 			<input type="submit" value="注册" class="submit" />
 		</dl>
+        <?php } ?>
 	</form>
 </div>
 <?php

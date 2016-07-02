@@ -6,6 +6,7 @@
 	*Date:2015年1月30日
 	*===================================================
 	**/
+	session_start();
 	//定义一个常量用来调用includes里面的文件，防止恶意调用
 	define('IN_TG',true);
 	//定义一个常量指定本页CSS
@@ -46,7 +47,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>凌云网络--个人中心</title>
+<title><?php echo $_system['webname'] ?>--个人中心</title>
 <?php
 	require ROOT_PATH.'includes/title.inc.php'
 ?>

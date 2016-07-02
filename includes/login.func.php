@@ -48,6 +48,9 @@ function _check_username($_username,$min=2,$max=20){
 }
 //验证密码，参数分别为密码string、密码最小长度int
 function _check_password($_pass,$min=6){
+	if (is_array($_pass)) {
+		_location('非法参数！','');
+	}
 	//去掉空格
 	$pass=trim($_pass);
 	//判断密码

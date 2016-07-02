@@ -17,20 +17,21 @@ header('Content-Type: text/html;charset=utf-8');
 	if (!isset($_GET['active'])) {
 		_alert_back('非法操作！');
 	}
-	if (isset($_GET['action']) && isset($_GET['active']) && $_GET['action']='ok') {
+	if (isset($_GET['active']) && @$_GET['action']=='ok') {
 		$_active=_mysql_string($_GET['active']);
-		if (_fetch_array("SELECT tg_active FROM tg_user WHERE tg_active='$_active' LIMIT 1")) {
+		if (!!_fetch_array("SELECT tg_id FROM tg_user WHERE tg_active='{$_active}' LIMIT 1")) {
 			//将Tg_active清空表示已激活用户
-			_query("UPDATE tg_user SET tg_active=NULL WHERE tg_active='$_active' LIMIT 1");
+			_query("UPDATE tg_user SET tg_active=NULL WHERE tg_active='{$_active}' LIMIT 1");
 			if (_mysql_affected_rows()==1) {
 				_close();
 				_location('恭喜你，账户激活成功！','login.php');
 			}else{
 				_close();
-				_location('账户激活失败，请重试！','active.php?active='.$clean['active']);
+				_alert_back('账户激活失败，请重试！');
 			}
 		}else{
-			_alert_back('非法操作！');
+            _location('您已经激活过了！','login.php');
+            _close();
 		}
 	}
 ?>
@@ -38,7 +39,7 @@ header('Content-Type: text/html;charset=utf-8');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>凌云网络--激活</title>
+<title><?php echo $_system['webname'] ?>--激活</title>
 <?php
 	require ROOT_PATH.'includes/title.inc.php'
 ?>

@@ -6,6 +6,7 @@
 	*Date:2015年1月30日
 	*===================================================
 	**/
+	session_start();
 	//定义一个常量用来调用includes里面的文件，防止恶意调用
 	define('IN_TG',true);
 	//定义一个常量指定本页CSS
@@ -16,7 +17,7 @@
 	include ROOT_PATH.'/includes/conn.php';
 	//分页,核心函数库
 	global $_pagessize,$_pagenum;//可以不要
-	_page("SELECT tg_id FROM tg_user",10);
+	_page("SELECT tg_id FROM tg_user",$_system['blog']);
 	//从数据库提取数据获取结果集
 	$_result=_query("SELECT 
 							tg_id,
@@ -35,7 +36,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>凌云网络--博友</title>
+<title><?php echo $_system['webname'] ?>--博友</title>
 <?php
 	require ROOT_PATH.'includes/title.inc.php'
 ?>
@@ -47,15 +48,14 @@
 ?>
 <div id="blog">
 	<h2>博友列表</h2>
-	
 	<?php while (!!$_rows=_fetch_array_list($_result)) { ?>
 	<dl>
 		<dd class="user"><?php echo _html($_rows['tg_username']);echo '('._html($_rows['tg_sex']).')'?></dd>
 		<dt><img src="<?php echo _html($_rows['tg_face']) ?>" alt="<?php echo _html($_rows['tg_username']) ?>" /></dt>
-		<dd class="message"><a href="" name="message" title="<?php echo _html($_rows['tg_id']) ?>">发消息</a></dd>
-		<dd class="friend"><a href="" name="friend" title="<?php echo _html($_rows['tg_id']) ?>">加为好友</a></dd>
-		<dd class="guest">写留言</dd>
-		<dd class="flower"><a href="" name="flower" title="<?php echo _html($_rows['tg_id']) ?>">给她送花</a></dd>
+		<dd class="message"><a name="message" title="<?php echo _html($_rows['tg_id']) ?>">发消息</a></dd>
+		<dd class="friend"><a name="friend" title="<?php echo _html($_rows['tg_id']) ?>">加为好友</a></dd>
+		<dd class="guest"><a name="guest" title="<?php echo _html($_rows['tg_id']) ?>">写留言</a></dd>
+		<dd class="flower"><a name="flower" title="<?php echo _html($_rows['tg_id']) ?>">给她送花</a></dd>
 	</dl>
 	<?php } ?>
 	<?php 

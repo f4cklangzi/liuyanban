@@ -45,6 +45,22 @@ h2{
 	text-align: right;
 	padding: 20px 50px 0 0;
 }
+#header ul li.skin{
+	position: relative;
+}
+#header ul li dl#skin{
+	position: absolute;
+	top: 18px;
+	right: -25px;
+	width: 80px;
+	height: auto;
+	text-align: center;
+	padding: 5px;
+	display: none;
+}
+#header ul li dl #skin dd{
+	padding: 2px;
+}
 #header ul li{
 	display: inline;
 }
@@ -55,6 +71,9 @@ h2{
 #header ul li a:hover{
 	color: #f00;
 	text-decoration: underline;
+}
+#header ul li a.manage{
+	color: #339933;
 }
 #header ul li .unread{
 	background: url(../../image/message.gif) no-repeat left center;
@@ -101,6 +120,7 @@ h2{
 	height: 20px;
 	clear: both;
 	padding: 10px 0;
+	font-size: 12px;
 }
 #page_text ul{
 	text-align: center;

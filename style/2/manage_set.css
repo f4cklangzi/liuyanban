@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+#member #member_main dl{
+	width: 80%;
+}
+#member #member_main dl span{
+	display: inline-block;
+	position: relative;
+	top: 20px;
+}
+#member #member_main dl dd{
+	padding: 1px 0;
+	width: 400px;
+	text-align: left;
+	position: relative;
+	left: 180px;
+}
+#member #member_main dl dd select{
+	width: 202px;
+}
+#member #member_main dl dd input{
+	border: 1px solid #ccc;
+	width: 200px;
+}
+#member #member_main dl dd input:hover{
+	border: 1px solid #369;
+	background-color: #f1f1f1;
+}
+#member #member_main dl dd.code span{
+	width: 100px;
+	position: relative;
+	top: 0;
+}
+#member #member_main dl dd.code span input{
+	width: 40px;
+}
+#member #member_main dl dd.register span{
+	width: 100px;
+	position: relative;
+	top: 0;
+}
+#member #member_main dl dd.register span input{
+	width: 40px;
+}
+#member #member_main dl input.code{
+	width: 60px;
+}
+#member #member_main dl .codetext{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	position: relative;
+	top: 0;
+}
+#member #member_main dl img{
+	position: relative;
+	top: 7px;
+	left: 3px;
+}
+#member #member_main dl img:hover{
+	cursor: pointer;
+}
+#member #member_main dl dd.botton{
+	position: relative;
+	left: 140px;
+	top: 17px;
+}
+#member #member_main dl input.button{
+	width: 60px;
+	height: 20px;
+	line-height: 15px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #999;
+	display: inline-block;
+	position: relative;
+	left: 5px;
+}
+#member #member_main dl input.button:hover{
+	background-color: #e5e5e5;
+}

@@ -11,6 +11,7 @@ if (!defined('IN_TG')) {
 }
 global $_unread_message;
 ?>
+<script src="js/skin.js"></script>
 <div id="header">
 	<h1>
 		<a href="index.php">凌云网络多用户留言系统</a>
@@ -30,10 +31,22 @@ global $_unread_message;
 				echo "\n";
 			}
 		?>
+		<li><a href="photo.php">相册</a></li>
 		<li><a href="blog.php">博友</a></li>
-		<li>风格</li>
-		<li>管理</li>
+		<li class="skin" onmouseover="inskin()" onmouseout="outskin()">
+			<a href="">风格</a>
+			<dl id="skin">
+				<dd><a href="skin.php?id=1">简洁商务</a></dd>
+				<dd><a href="skin.php?id=2">粉色诱惑</a></dd>
+				<dd><a href="skin.php?id=3">绿色森林</a></dd>
+			</dl>
+		</li>
 		<?php 
+		if (isset($_COOKIE['username'])) {
+			if (@$_rows['tg_level']==1) {
+				echo '<li><a class="manage" href="manage.php">管理 </a></li>';
+			}
+		}
 		if (isset($_COOKIE['username'])){
 			echo '<li><a href="logout.php">退出</a></li>';
 		} 

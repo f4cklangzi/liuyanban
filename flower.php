@@ -39,7 +39,9 @@
 		//处理信息
 		if (@$_GET['action']=='send') {
 			//判断验证码是否正确,核心函数库
-			@_check_code($_POST['code'],$_SESSION['code']);
+			if ($_system['code']==1){
+                @_check_code($_POST['code'],$_SESSION['code']);
+            }
 			$_clean = array();
 			$_clean['touser']=@_check_username($_POST['touser']);
 			$_clean['content']=@_check_content($_POST['content'],$min=1,$max=20);
@@ -96,7 +98,6 @@
 			if (_mysql_affected_rows()==1) {
 				//关闭连接
 				_close();
-				_session_destroy();
 				//跳转
 				_location('恭喜你，送花成功！','');
 			}else{
@@ -133,7 +134,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>凌云网络--送花</title>
+<title><?php echo $_system['webname'] ?>--送花</title>
 <?php
 	require ROOT_PATH.'includes/title.inc.php'
 ?>
@@ -156,7 +157,14 @@
 				<img class="flower_img" src="image/x4.gif" alt="鲜花"/>
 			</dd>
 			<dd><textarea name="content" id="" cols="30"><?php echo $_cookie_username ?>送你鲜花！</textarea></dd>
-			<dd class="codetext">验证码：<input type="text" name="code" class="code"/><img id="code" src="code.php" alt="验证码" /><input type="submit" value="发送" class="button" /></dd>
+			<dd class="codetext">
+                <?php
+                    if ($_system['code']==1){
+                        echo '验证码：<input type="text" name="code" class="code"/><img id="code" src="code.php" alt="验证码" />';
+                    }
+                ?>
+                <input type="submit" value="发送" class="button" />
+            </dd>
 			
 		</dl>
 	</form>
