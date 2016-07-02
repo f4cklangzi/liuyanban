@@ -8,8 +8,9 @@
 //数据库连接
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root' );
-define('DB_PWD', 'mypassword');
+define('DB_PWD', 'root');
 define('DB_NAME','testguest');
+
 //初始化数据库
 _connect();
 _select_db();
